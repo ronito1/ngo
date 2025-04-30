@@ -30,7 +30,7 @@ function triggerCountdown(countdownElem, days, hours, minutes, seconds) {
         const displaySeconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="countdown"
-        // document.getElementById("countdown").innerHTML = `${displayDays}d ${displayHours}h ${displayMinutes}m ${displaySeconds}s`;
+        // document.getElementById("countdown").innerHTML = `₹{displayDays}d ₹{displayHours}h ₹{displayMinutes}m ₹{displaySeconds}s`;
 
         const countdownElement = document.querySelector(countdownElem);
 

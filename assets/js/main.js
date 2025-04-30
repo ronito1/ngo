@@ -238,8 +238,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
 
 
-    // gallery slider
-    new Swiper(".ul-gallery-slider", {
+    // Stories Of Change slider
+    new Swiper(".ul-Stories Of Change-slider", {
         slidesPerView: 2.2,
         loop: true,
         autoplay: true,
@@ -352,7 +352,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         // Calculate offset from viewport center
         const offset = (imageCenter - viewportCenter) * -0.5; // Adjust speed with multiplier
 
-        parallaxImage.style.transform = `translateY(${offset}px)`;
+        parallaxImage.style.transform = `translateY(₹{offset}px)`;
     }
 
 
@@ -360,19 +360,19 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // REALTICS JS
     // -------------------------------    
 
-    // testimonial slider
-    new Swiper(".ul-inner-testimonial-slider", {
+       // testimonial slider
+       new Swiper(".ul-testimonial-2-slider", { // Change this line
         slidesPerView: 1,
         loop: true,
         autoplay: true,
         spaceBetween: 15,
         pagination: {
-            el: ".ul-inner-testimonial-slider-pagination",
+            el: ".ul-testimonial-2-slider-pagination", // Ensure this matches your HTML if you have pagination
             type: "progressbar",
         },
         navigation: {
-            prevEl: ".ul-inner-testimonial-slider-prev",
-            nextEl: ".ul-inner-testimonial-slider-next",
+            prevEl: ".ul-testimonial-2-slider-nav .prev", // Update to match your HTML
+            nextEl: ".ul-testimonial-2-slider-nav .next", // Update to match your HTML
         },
         breakpoints: {
             576: {
@@ -496,7 +496,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             clickable: true,
             renderBullet: function (index, className) {
                 const slideNumber = String(index + 1).padStart(2, '0'); // Format to '01', '02', etc.
-                return `<span class="${className}">${slideNumber}</span>`;
+                return `<span class="₹{className}">₹{slideNumber}</span>`;
             },
         },
         thumbs: {
@@ -602,7 +602,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
             clickable: true,
             renderBullet: function (index, className) {
                 const slideNumber = String(index + 1).padStart(2, '0'); // Format to '01', '02', etc.
-                return `<span class="${className}">${slideNumber}</span>`;
+                return `<span class="₹{className}">₹{slideNumber}</span>`;
             },
         },
     });
@@ -701,36 +701,42 @@ document.addEventListener("DOMContentLoaded", (event) => {
         })
     }
 
-    // testimonial slider
-    new Swiper(".ul-testimonial-slider", {
-        slidesPerView: 1,
-        loop: true,
-        autoplay: true,
-        spaceBetween: 15,
-        pagination: {
-            el: ".ul-testimonial-slider-pagination",
-        },
-        breakpoints: {
-            768: {
-                slidesPerView: 2,
+    document.addEventListener('DOMContentLoaded', function () {
+        new Swiper(".ul-testimonial-2-slider", {
+            slidesPerView: 1,
+            loop: true,
+            autoplay: true,
+            spaceBetween: 15,
+            pagination: {
+                el: ".ul-testimonial-2-slider-pagination", // Ensure this matches your HTML if you have pagination
+                type: "progressbar",
             },
-            992: {
-                spaceBetween: 20,
-                slidesPerView: 3,
+            navigation: {
+                prevEl: ".ul-testimonial-2-slider-nav .prev", // Matches your HTML
+                nextEl: ".ul-testimonial-2-slider-nav .next", // Matches your HTML
             },
-            1200: {
-                spaceBetween: 20,
-                slidesPerView: 4,
-            },
-            1680: {
-                slidesPerView: 4,
-                spaceBetween: 26,
-            },
-            1700: {
-                slidesPerView: 4,
-                spaceBetween: 30,
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                },
+                1200: {
+                    spaceBetween: 20,
+                    slidesPerView: 3,
+                },
+                1680: {
+                    slidesPerView: 3,
+                    spaceBetween: 26,
+                },
+                1700: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                }
             }
-        }
+        });
     });
 
     // about page partners slider

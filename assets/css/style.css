@@ -21,7 +21,7 @@ CSS INDEX
 13. Team
 14. Testimonial
 15. Blog
-16. Gallery
+16. Stories Of Change
 17. CTA
 18. Footer
 19. Features
@@ -102,8 +102,13 @@ i {
 
 p {
   line-height: 1.75;
+  
 }
 
+h5 {
+  color: #F4F4F4;
+
+}
 ul {
   padding: 0;
   margin: 0;
@@ -2778,10 +2783,10 @@ button {
 .ul-testimonial-2-slider-nav {
   display: flex;
   gap: clamp(14px, 1.26vw, 24px);
-  position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  z-index: 10; /* Adjust as necessary */
+       position: relative; /* Ensure z-index works */
   background-color: var(--white);
 }
 @media screen and (max-width: 479px) {
@@ -3078,21 +3083,21 @@ button {
   margin-bottom: clamp(12px, 2.21vw, 42px);
 }
 
-.ul-gallery-item {
+.ul-Stories Of Change-item {
   position: relative;
   overflow: hidden;
   border-radius: 999px;
   transition: 0.4s ease;
 }
-.ul-gallery-item:hover .ul-gallery-item-btn-wrapper {
+.ul-Stories Of Change-item:hover .ul-Stories Of Change-item-btn-wrapper {
   opacity: 1;
 }
-.ul-gallery-item img {
+.ul-Stories Of Change-item img {
   width: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
 }
-.ul-gallery-item-btn-wrapper {
+.ul-Stories Of Change-item-btn-wrapper {
   position: absolute;
   inset: 0;
   display: flex;
@@ -3102,7 +3107,7 @@ button {
   opacity: 0;
   transition: 0.3s ease;
 }
-.ul-gallery-item-btn-wrapper::before {
+.ul-Stories Of Change-item-btn-wrapper::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -3111,12 +3116,12 @@ button {
   opacity: 70%;
   z-index: -1;
 }
-.ul-gallery-item-btn-wrapper a {
+.ul-Stories Of Change-item-btn-wrapper a {
   font-size: clamp(34px, 2.1vw, 40px);
   color: var(--white);
   display: inline-flex;
 }
-.ul-gallery-item-btn-wrapper a:hover {
+.ul-Stories Of Change-item-btn-wrapper a:hover {
   color: var(--black);
 }
 
